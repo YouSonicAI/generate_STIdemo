@@ -10,10 +10,12 @@ import pandas as pd
 from moviepy import *
 from moviepy.editor import *
 import glob
+from CalSTI import calSTI
 
-file = pd.read_csv("/Users/queenie/Documents/generate_STIdemo/Temp/csv/伟贤看天下[2]_STI_result_slice4.csv")
+# file = pd.read_csv("/Users/queenie/Documents/generate_STIdemo/Temp/csv/伟贤看天下[2]_STI_result_slice4.csv")
 videos_path = "/Users/queenie/Documents/generate_STIdemo/Temp/origin_video/22.mp4"
 frames_save_path = "./伟贤看天下22"
+file = calSTI(videos_path)
 # image = frames_save_path
 new_video_save_path = "./伟贤看天下22.mp4"
 GENERATE_IMAGE = True

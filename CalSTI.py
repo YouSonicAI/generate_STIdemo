@@ -26,7 +26,7 @@ def relative_to_assets(path: str) -> Path:
 
 
 model_path = relative_to_assets('19epoch_attention_STI_FPN_Encoder.pt')
-cut_time = 10
+cut_time = 200
 
 def check_audio(wave_data, framerate):
     if framerate != 16000:
@@ -131,7 +131,8 @@ def calSTI(path):
     audio = my_audio_clip.to_soundarray()
     fs = my_audio_clip.fps
     audio, audio_time, fs = check_audio(audio, fs)
-    get_offline_res(audio, audio_time, fs, 'attention')
+    csv_res = get_offline_res(audio, audio_time, fs, 'attention')
+    return csv_res
 
 
 if __name__ == "__main__":
