@@ -1,0 +1,5 @@
+*.avi
+Temp
+*.mp4
+*.pt
+/save_model/19epoch_attention_STI_FPN_Encoder.pt
